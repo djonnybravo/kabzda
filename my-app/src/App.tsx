@@ -8,6 +8,7 @@ function App() {
       This is APP component
       <Rating />
       <Accordion />
+        <Rating />
     </div>
   );
 }
@@ -15,26 +16,49 @@ function App() {
 function Rating() {
     return (
         <div>
-            <div>star</div>
-            <div>star</div>
-            <div>star</div>
-            <div>star</div>
-            <div>star</div>
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
         </div>
-    )
+    );
 }
+
+function Star() {
+    return (
+        <div>star</div>
+    );
+}
+
 
 function Accordion() {
     return (
         <div>
+            <AccordionTitle />
+            <AccordionBody />
+        </div>
+    );
+}
+
+function AccordionTitle() {
+    return (
+        <div>
             <h3>Menu</h3>
+        </div>
+    );
+}
+
+function AccordionBody () {
+    return (
+        <div>
             <ul>
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
             </ul>
         </div>
-    )
+        );
 }
 
 export default App;
