@@ -1,38 +1,63 @@
-import React from "react";
+import React, {useState} from "react";
 
-type onOffType = {
-    status: boolean
+type PropsType = {
+    on: boolean
 }
 
 
 
-function OnOff (props:onOffType) {
+function OnOff(props: PropsType) {
+
+
+
+
+    const [on, setON] = useState(false)
+
+
+
+    const onStyle ={
+
+        display: "inline-block",
+        border: "1px solid black",
+        backgroundColor: on ? "green" : "white",
+        padding: "15px",
+        margin: "10px",
+
+    }
+    const oFFStyle ={
+        display: "inline-block",
+        margin: "10px",
+        border: "1px solid black",
+        backgroundColor: on? "white" : "red" ,
+        padding: "15px"
+
+    }
+    const indicatorstyle ={
+        width: "15px",
+        height: "15px",
+        borderRadius: "15px",
+        border: "1px solid black",
+        display: "inline-block",
+        margin: "auto",
+        backgroundColor: on ? "green" : "red"
+    }
+
+
+const offClick = () => {
+        setON(false)
+}
+const onClick = () => {
+        setON(true)
+}
+
     return (
+
         <div>
-            {props.status && <OnButtons/>}
-            {!props.status && <OffButtons/>}
+            <div style={onStyle} onClick={ onClick}>ON</div>
+            <div style={oFFStyle} onClick={ offClick}>OFF</div>
+            <div style={indicatorstyle}></div>
         </div>
     )
 }
-
-
-function OnButtons() {
-
-    return (<div>
-        <button style={{backgroundColor: "green"}}>ON</button>
-        <button>OFF</button>
-        <button style={{backgroundColor: "green", borderRadius: "50px"}}> O </button>
-    </div>
-    )
-}
-function OffButtons() {
-    return (<div>
-            <button>ON</button>
-            <button style={{backgroundColor: "red"}}>OFF</button>
-            <button style={{backgroundColor: "red", borderRadius: "50px"}}> O </button>
-    </div>
-    )
-}
-
 
 export default OnOff
