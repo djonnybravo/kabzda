@@ -1,41 +1,44 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Accordion from "./components/Accordion/Accordion";
 import './App.css';
 import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import AccordionUnconrolled from "./components/Accordion/AccordionUnconrolled";
 import {RatingUncontrolled} from "./components/Rating/RatingUncontrolled";
+import UncontrolledOnOff from "./components/OnOff/UncontrolledOnOff";
+
 function App() {
+
+    const [ratingValue, setRatingValue] = useState(0)
+    let [collapsed, setCollapse] = useState(false)
+    const [on, setON] = useState(false)
     return (
         <div>
-            {/*<Accordion titleValue={'Menu'} collapsed={true}/>*/}
-            {/*<Accordion titleValue={'Users'} collapsed={false}/>*/}
 
-            <AccordionUnconrolled titleValue={"TRY THIS"} />
-            <br/>
-            <br/>
-            <br/>
+            <Accordion titleValue={'Users'} collapsed={collapsed} onChange={() => {
+                setCollapse(!collapsed)
+            }}/>
+            <hr/>
+            <AccordionUnconrolled titleValue={"TRY THIS"}/>
+            <hr/>
             <RatingUncontrolled/>
-            <br/>
-            <br/>
-            <br/>
-            {/*<Rating value={2} />*/}
-            {/*<Rating value={3} />*/}
-            {/*<Rating value={4} />*/}
-            {/*<Rating value={5} />*/}
+            <hr/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
 
-            <OnOff on={true}/>
-            <OnOff on={false}/>
+            <UncontrolledOnOff on={false}/>
+
+
+            <OnOff on={on} click={() => setON(!on)}/>
+            <OnOff on={on} click={() => setON(!on)}/>
         </div>
     );
 }
 
 
-
-
 type PageTitlePropsType = {
     title: string
 }
+
 function PageTitle(props: PageTitlePropsType) {
     return <h1>{props.title}</h1>
 }
