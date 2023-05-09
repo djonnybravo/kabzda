@@ -2,7 +2,7 @@ import React from 'react';
 
 const Star = () => {
     return (
-        <span>star</span>
+        <div>star</div>
     );
 };
 
