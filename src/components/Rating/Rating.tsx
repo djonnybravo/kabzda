@@ -1,13 +1,14 @@
 import React from 'react';
+import Star from "./Star/Star";
 
 const Rating = () => {
     return (
         <div>
-            <span>star</span>
-            <span>star</span>
-            <span>star</span>
-            <span>star</span>
-            <span>star</span>
+           <Star/>
+           <Star/>
+           <Star/>
+           <Star/>
+           <Star/>
         </div>
     );
 };
