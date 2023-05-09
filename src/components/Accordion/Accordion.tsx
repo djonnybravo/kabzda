@@ -1,14 +1,12 @@
 import React from 'react';
+import AccordionBody from "./AccordionBody/AccordionBody";
+import AccordionTitle from "./AccordionTitle/AccordionTitle";
 
 const Accordion = () => {
     return (
         <div>
-            <h3>Menu</h3>
-            <ul>
-                <li>First</li>
-                <li>Second</li>
-                <li>Third</li>
-            </ul>
+            <AccordionTitle/>
+            <AccordionBody/>
         </div>
     );
 };
