@@ -6,7 +6,7 @@ const Accordion = () => {
             <h3>Menu</h3>
             <ul>
                 <li>First</li>
-                <li>Seccond</li>
+                <li>Second</li>
                 <li>Third</li>
             </ul>
         </div>
