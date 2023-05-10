@@ -14,7 +14,7 @@ function App() {
         <OnOff on={false}/>
         <br/><br/><hr/>
         <Rating value={3}/>
-        <Rating value={4}/>
+
     </div>
   );
 }
