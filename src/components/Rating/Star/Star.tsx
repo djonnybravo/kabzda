@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Star = () => {
+type StarPropsType = {
+    selected: boolean
+}
+
+const Star = (props:StarPropsType) => {
     return (
-        <div>star</div>
+        <span>{props.selected ? <b>star</b> : <>star</>}</span>
     );
 };
 
