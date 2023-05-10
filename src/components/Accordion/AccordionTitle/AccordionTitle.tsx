@@ -6,7 +6,7 @@ type AccordionTitlePropsType = {
 
 
 const AccordionTitle = (props:AccordionTitlePropsType) => {
-    return <h3>{props.title}</h3>;
+    return <h3> -- {props.title} --</h3>;
 };
 
 export default AccordionTitle;
