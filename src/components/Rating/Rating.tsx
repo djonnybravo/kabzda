@@ -1,7 +1,11 @@
 import React from 'react';
 import Star from "./Star/Star";
 
-const Rating = () => {
+type RatingPropsType = {
+    value: number
+}
+
+const Rating = (props: RatingPropsType) => {
     return (
         <div>
            <Star selected={true}/>
