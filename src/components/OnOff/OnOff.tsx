@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useTransition} from "react";
 
 type OnOffPropsType = {
     on : boolean
@@ -8,16 +8,26 @@ type OnOffPropsType = {
 
 const OnOff = (props:OnOffPropsType) => {
 
+   const [onOff, setOnOff] = useState(false)
+
+    const onClickHandler = () => {
+        setOnOff(true)
+    }
+
+    const offClickHandler = () => {
+        setOnOff(false)
+    }
+
     const green = {
-        backgroundColor: props.on ? "green" : "white",
+        backgroundColor: onOff ? "green" : "white",
         width: "30px",
         height:"20px",
         border: "1px solid black",
         display: "inline-block",
         padding: "10px"
-    }
+    };
     const red = {
-        backgroundColor: props.on ? "white" : "red",
+        backgroundColor: onOff ? "white" : "red",
         width: "30px",
         height:"20px",
         border: "1px solid black",
@@ -25,7 +35,7 @@ const OnOff = (props:OnOffPropsType) => {
         padding: "10px",
         marginLeft: "5px"
 
-    }
+    };
     const indicator = {
         width: "10px",
         height:"10px",
@@ -33,14 +43,14 @@ const OnOff = (props:OnOffPropsType) => {
         border: "1px solid black",
         display: "inline-block",
         marginLeft: "5px",
-        backgroundColor: props.on ? "green" : "red"
+        backgroundColor: onOff ? "green" : "red"
 
-    }
+    };
 
     return (
         <div>
-           <div style={green}>ON</div>
-           <div style={red}>OFF</div>
+           <div style={green} onClick={onClickHandler}>ON</div>
+           <div style={red} onClick={offClickHandler}>OFF</div>
            <div style={indicator}></div>
         </div>
     );
