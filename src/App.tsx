@@ -7,7 +7,7 @@ import Accordion from "./components/Accordion/Accordion";
 function App() {
   return (
     <div className="App">
-        <Accordion/>
+        <Accordion title = {"Meню"}/>
         <br/><br/><hr/>
         <Rating value={3}/>
         <Rating value={4}/>
