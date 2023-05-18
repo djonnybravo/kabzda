@@ -12,8 +12,7 @@ function App() {
         <hr/>
         <UnconntroledAccordion title={"Uncontrolled"} />
         <br/><br/><hr/>
-        <OnOff on={true}/>
-        <OnOff on={false}/>
+        <OnOff />
         <br/><br/><hr/>
         <Rating value={3}/>
 

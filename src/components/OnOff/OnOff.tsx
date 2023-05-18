@@ -1,7 +1,7 @@
 import React, {useState, useTransition} from "react";
 
 type OnOffPropsType = {
-    on : boolean
+    on?: boolean
 }
 
 
