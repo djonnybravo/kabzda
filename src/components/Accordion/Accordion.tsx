@@ -2,7 +2,7 @@ import React from 'react';
 import AccordionBody from "./AccordionBody/AccordionBody";
 import AccordionTitle from "./AccordionTitle/AccordionTitle";
 
-type AccordionPropsType = {
+export type AccordionPropsType = {
     title: string
     collapsed: boolean
 }
@@ -17,3 +17,4 @@ const Accordion = (props: AccordionPropsType) => {
 };
 
 export default Accordion;
+
