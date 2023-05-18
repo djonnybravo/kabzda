@@ -4,6 +4,7 @@ import Rating from "./components/Rating/Rating";
 import Accordion from "./components/Accordion/Accordion";
 import OnOff from "./components/OnOff/OnOff";
 import UnconntroledAccordion from "./components/Accordion/UnconntroledAccordion";
+import UncontrolledRating from "./components/Rating/UncontrolledRating";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <OnOff />
         <br/><br/><hr/>
         <Rating value={3}/>
+        <br/><br/><hr/>
+        <UncontrolledRating/>
 
     </div>
   );
