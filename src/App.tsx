@@ -6,6 +6,7 @@ import UncontrolledRating from "./components/Rating/UncontrolledRating";
 import Input from "./components/Input/Input";
 import Checkbox from "./components/Input/Checkbox";
 import Select from "./components/Select/Select";
+import MySelect from "./components/Select/MySelect.";
 
 function App() {
     const items = [
@@ -17,6 +18,8 @@ function App() {
     ]
     return (
         <div className="App">
+            <MySelect/>
+            <hr/>
             <Accordion title={"Meню"} items={items}/>
             <hr/>
             <br/><br/>
