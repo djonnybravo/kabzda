@@ -1,25 +1,27 @@
 import React from "react";
 import "./App.css";
-import Rating from "./components/Rating/Rating";
 import Accordion from "./components/Accordion/Accordion";
 import OnOff from "./components/OnOff/OnOff";
-import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion";
 import UncontrolledRating from "./components/Rating/UncontrolledRating";
 import Input from "./components/Input/Input";
 import Checkbox from "./components/Input/Checkbox";
 import Select from "./components/Select/Select";
 
 function App() {
+    const items = [
+        {id: 1, title: "First"},
+        {id: 2, title: "Second"},
+        {id: 3, title: "Third"},
+        {id: 4, title: "Fourth"},
+
+    ]
     return (
         <div className="App">
-            <Accordion title={"Meню"}/>
+            <Accordion title={"Meню"} items={items}/>
             <hr/>
             <br/><br/>
             <hr/>
             <OnOff/>
-            <br/><br/>
-            <hr/>
-            <Rating value={3}/>
             <br/><br/>
             <hr/>
             <UncontrolledRating/>

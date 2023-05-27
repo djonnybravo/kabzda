@@ -1,11 +1,14 @@
 import React from 'react';
+import {ItemsType} from "../Accordion";
 
-const AccordionBody = () => {
+type AccordionBodyType = {
+    items: ItemsType[]
+}
+
+const AccordionBody = (props: AccordionBodyType) => {
     return (
         <ul>
-            <li>First</li>
-            <li>Second</li>
-            <li>Third</li>
+            {props.items.map(i => <li>{i.title}</li>)}
         </ul>
     );
 };
