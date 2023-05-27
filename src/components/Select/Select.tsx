@@ -13,6 +13,7 @@ const Select = () => {
                 <option value={'2'}>NewYork</option>
                 <option value={'3'}>Moscow</option>
             </select>
+            <span>{value}</span>
         </div>
     );
 };
