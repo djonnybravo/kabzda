@@ -16,7 +16,7 @@ const UncontrolledAccordion = (props: UnconntroledAccordionPropsType) => {
         }}>
             <AccordionTitle title={props.title}/>
 
-            {!collapsed && <AccordionBody/>}
+            {/*{!collapsed && <AccordionBody/>}*/}
 
         </div>
     );
