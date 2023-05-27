@@ -18,23 +18,27 @@ const MySelect = (props: mySelectPropsType) => {
     const selectedItem = props.items.find(i => i.value === props.value)
     const onSelectClick = () => props.setCollapsed(!props.collapsed)
 
-
+    const changeValue = (value: any) => {
+        props.changeValue(value)
+        props.setCollapsed(true)
+    }
 
     return (
         <div>
             <h3 onClick={onSelectClick} className={styles.select}>{selectedItem && selectedItem.title}</h3>
 
-            {props.collapsed && <span>Выбрано велью: {props.value}, у него тайтл: {selectedItem?.title}</span>}
-            {!props.collapsed &&
+            {
+                props.collapsed &&
+                <span>Выбрано велью: {props.value}, у него тайтл: {selectedItem?.title}</span>
+            }
+            {
+                !props.collapsed &&
                 <div className={styles.items}>
                     {props.items.map(i => {
 
-                        const changeValue = () => {
-                            props.changeValue(i.value)
-                            props.setCollapsed(true)
-                        }
 
-                        return <div key={i.value} onClick={changeValue}>{i.title}</div>
+
+                        return <div key={i.value} onClick={() => changeValue(i.value)}>{i.title}</div>
                     })}
                 </div>
             }
