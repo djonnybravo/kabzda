@@ -6,6 +6,7 @@ import OnOff from "./components/OnOff/OnOff";
 import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion";
 import UncontrolledRating from "./components/Rating/UncontrolledRating";
 import Input from "./components/Input/Input";
+import Checkbox from "./components/Input/Checkbox";
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
         <br/><br/><hr/>
         <UncontrolledRating/>
         <br/><br/><hr/>
-        <Input/>
+        <Input />
+        <br/><br/><hr/>
+        <Checkbox/>
     </div>
   );
 }
