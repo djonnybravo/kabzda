@@ -8,7 +8,7 @@ type UnconntroledAccordionPropsType = {
 
 
 
-const UnconntroledAccordion = (props: UnconntroledAccordionPropsType) => {
+const UncontrolledAccordion = (props: UnconntroledAccordionPropsType) => {
 
     const [collapsed, setCollapsed] = useState(false)
     return (
@@ -21,4 +21,4 @@ const UnconntroledAccordion = (props: UnconntroledAccordionPropsType) => {
     );
 };
 
-export default UnconntroledAccordion;
+export default UncontrolledAccordion;
