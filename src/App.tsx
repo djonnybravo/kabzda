@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
-import Accordion from "./components/Accordion/Accordion";
+import Accordion, {ItemsType} from "./components/Accordion/Accordion";
 import OnOff from "./components/OnOff/OnOff";
 import UncontrolledRating from "./components/Rating/UncontrolledRating";
 import Input from "./components/Input/Input";
@@ -16,9 +16,22 @@ function App() {
         {id: 4, title: "Fourth"},
 
     ]
+
+    const [collapsed, setCollapsed] = useState(true)
+
+    const itemsForSelect = [
+        {value: "1", title: "First Item"},
+        {value: "2", title: "Second Item"},
+        {value: "3", title: "Third Item"},
+    ]
+
+    const [value, setValue] = useState('2')
+    const changeValue = (newValue: any) => setValue(newValue)
+
+
     return (
         <div className="App">
-            <MySelect/>
+            <MySelect items={itemsForSelect} value={value} collapsed={collapsed} setCollapsed={setCollapsed} changeValue={changeValue}/>
             <hr/>
             <Accordion title={"Meню"} items={items}/>
             <hr/>
