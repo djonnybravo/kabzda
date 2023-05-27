@@ -7,6 +7,7 @@ import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion"
 import UncontrolledRating from "./components/Rating/UncontrolledRating";
 import Input from "./components/Input/Input";
 import Checkbox from "./components/Input/Checkbox";
+import Select from "./components/Select/Select";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <Input />
         <br/><br/><hr/>
         <Checkbox/>
+          <br/><br/><hr/>
+          <Select/>
     </div>
   );
 }
