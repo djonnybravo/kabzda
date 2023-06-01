@@ -7,6 +7,7 @@ import Input from "./components/Input/Input";
 import Checkbox from "./components/Input/Checkbox";
 import Select from "./components/Select/Select";
 import MySelect from "./components/Select/MySelect.";
+import UseMemo from "./components/UseMemo";
 
 function App() {
     const items = [
@@ -49,7 +50,7 @@ function App() {
             <Checkbox/>
             <br/><br/>
             <hr/>
-            <Select/>
+            <UseMemo/>
         </div>
     );
 }
