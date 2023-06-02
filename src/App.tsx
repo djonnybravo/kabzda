@@ -9,7 +9,8 @@ import Select from "./components/Select/Select";
 import MySelect from "./components/Select/MySelect.";
 import UseMemo from "./components/UseMemo";
 import UseState from "./components/UseState";
-import UseEffect from "./components/Select/useEffect";
+import UseEffect from "./useEffect";
+import AnalogClock from "./components/AnalogClock/AnalogClock";
 
 function App() {
     const items = [
@@ -34,29 +35,33 @@ function App() {
 
     return (
         <div className="App">
+
+            <AnalogClock/>
             <UseEffect/>
-            <hr/>
-            <MySelect items={itemsForSelect} value={value} collapsed={collapsed} setCollapsed={setCollapsed} changeValue={changeValue}/>
-            <hr/>
-            <Accordion title={"Meню"} items={items}/>
-            <hr/>
-            <br/><br/>
-            <hr/>
-            <OnOff/>
-            <br/><br/>
-            <hr/>
-            <UncontrolledRating/>
-            <br/><br/>
-            <hr/>
-            <Input/>
-            <br/><br/>
-            <hr/>
-            <Checkbox/>
-            <br/><br/>
-            <hr/>
-            <UseMemo/>
-            <hr/>
-            <UseState/>
+
+
+            {/*<hr/>*/}
+            {/*<MySelect items={itemsForSelect} value={value} collapsed={collapsed} setCollapsed={setCollapsed} changeValue={changeValue}/>*/}
+            {/*<hr/>*/}
+            {/*<Accordion title={"Meню"} items={items}/>*/}
+            {/*<hr/>*/}
+            {/*<br/><br/>*/}
+            {/*<hr/>*/}
+            {/*<OnOff/>*/}
+            {/*<br/><br/>*/}
+            {/*<hr/>*/}
+            {/*<UncontrolledRating/>*/}
+            {/*<br/><br/>*/}
+            {/*<hr/>*/}
+            {/*<Input/>*/}
+            {/*<br/><br/>*/}
+            {/*<hr/>*/}
+            {/*<Checkbox/>*/}
+            {/*<br/><br/>*/}
+            {/*<hr/>*/}
+            {/*<UseMemo/>*/}
+            {/*<hr/>*/}
+            {/*<UseState/>*/}
         </div>
     );
 }

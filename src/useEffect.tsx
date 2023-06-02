@@ -6,10 +6,10 @@ const UseEffect = () => {
 
     useEffect( () => {
 
-        setInterval(() => {
+        let timeID = setInterval(() => {
             setTime(new Date().toLocaleTimeString())
         }, 1000)
-
+        return clearInterval(timeID)
     }, [currentTime])
 
 
