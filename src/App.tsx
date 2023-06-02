@@ -8,6 +8,7 @@ import Checkbox from "./components/Input/Checkbox";
 import Select from "./components/Select/Select";
 import MySelect from "./components/Select/MySelect.";
 import UseMemo from "./components/UseMemo";
+import UseState from "./components/UseState";
 
 function App() {
     const items = [
@@ -51,6 +52,8 @@ function App() {
             <br/><br/>
             <hr/>
             <UseMemo/>
+            <hr/>
+            <UseState/>
         </div>
     );
 }
