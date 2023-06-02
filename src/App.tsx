@@ -9,6 +9,7 @@ import Select from "./components/Select/Select";
 import MySelect from "./components/Select/MySelect.";
 import UseMemo from "./components/UseMemo";
 import UseState from "./components/UseState";
+import UseEffect from "./components/Select/useEffect";
 
 function App() {
     const items = [
@@ -33,6 +34,8 @@ function App() {
 
     return (
         <div className="App">
+            <UseEffect/>
+            <hr/>
             <MySelect items={itemsForSelect} value={value} collapsed={collapsed} setCollapsed={setCollapsed} changeValue={changeValue}/>
             <hr/>
             <Accordion title={"Meню"} items={items}/>
