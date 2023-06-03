@@ -7,10 +7,12 @@ import Input from "./components/Input/Input";
 import Checkbox from "./components/Input/Checkbox";
 import Select from "./components/Select/Select";
 import MySelect from "./components/Select/MySelect.";
-import UseMemo from "./components/UseMemo";
+import UseMemoDifficultOperation from "./components/UseMemoDifficultOperation";
 import UseState from "./components/UseState";
 import UseEffect from "./useEffect";
 import AnalogClock from "./components/AnalogClock/AnalogClock";
+import ReactMemo from "./components/ReactMemo";
+import ReactMemoWithUseMemo from "./components/ReactMemoWithUseMemo";
 
 function App() {
     const items = [
@@ -35,33 +37,11 @@ function App() {
 
     return (
         <div className="App">
-
-            <AnalogClock/>
-            <UseEffect/>
-
-
-            {/*<hr/>*/}
-            {/*<MySelect items={itemsForSelect} value={value} collapsed={collapsed} setCollapsed={setCollapsed} changeValue={changeValue}/>*/}
-            {/*<hr/>*/}
-            {/*<Accordion title={"Meню"} items={items}/>*/}
-            {/*<hr/>*/}
-            {/*<br/><br/>*/}
-            {/*<hr/>*/}
-            {/*<OnOff/>*/}
-            {/*<br/><br/>*/}
-            {/*<hr/>*/}
-            {/*<UncontrolledRating/>*/}
-            {/*<br/><br/>*/}
-            {/*<hr/>*/}
-            {/*<Input/>*/}
-            {/*<br/><br/>*/}
-            {/*<hr/>*/}
-            {/*<Checkbox/>*/}
-            {/*<br/><br/>*/}
-            {/*<hr/>*/}
-            {/*<UseMemo/>*/}
-            {/*<hr/>*/}
-            {/*<UseState/>*/}
+            {/*<ReactMemo/>*/}
+            <br/>
+            <hr/>
+            <br/>
+            <ReactMemoWithUseMemo/>
         </div>
     );
 }

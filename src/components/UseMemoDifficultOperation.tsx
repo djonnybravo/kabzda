@@ -1,6 +1,6 @@
 import React, {useMemo, useState} from 'react';
 
-const UseMemo = () => {
+const UseMemoDifficultOperation = () => {
     const [a, setA] = useState(5)
     const [b, setB] = useState(5)
 
@@ -24,12 +24,9 @@ const UseMemo = () => {
         resultB *= i
     }
 
-
     return (
         <div>
-            <ReactMEMO/>
-
-
+           
             <div>
                 <h3>useMemo</h3>
                 <input value={a} onChange={(e) => setA(+e.currentTarget.value) }/>
@@ -44,21 +41,6 @@ const UseMemo = () => {
     );
 };
 
-export default UseMemo;
+export default UseMemoDifficultOperation;
 
 
-const ReactMEMO = () => {
-
-    const [counter, setCounter] = useState(0)
-    const [users, setUsers] = useState(["Sasha", "Dima", "Petya"])
-
-
-
-
-    return <div>
-        <h3>ReactMEMO</h3>
-        <div>
-
-        </div>
-    </div>
-}
