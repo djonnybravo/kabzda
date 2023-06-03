@@ -13,6 +13,7 @@ import UseEffect from "./useEffect";
 import AnalogClock from "./components/AnalogClock/AnalogClock";
 import ReactMemo from "./components/ReactMemo";
 import ReactMemoWithUseMemo from "./components/ReactMemoWithUseMemo";
+import UseCallback from "./components/UseCallback";
 
 function App() {
     const items = [
@@ -41,7 +42,8 @@ function App() {
             <br/>
             <hr/>
             <br/>
-            <ReactMemoWithUseMemo/>
+            {/*<ReactMemoWithUseMemo/>*/}
+            <UseCallback/>
         </div>
     );
 }
